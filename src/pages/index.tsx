@@ -13,7 +13,7 @@ export default function SignIn() {
       <Flex
         as='form'
         width='100%'
-        maxWidth='360px'
+        maxWidth={360}
         backgroundColor='gray.800'
         padding='8'
         borderRadius='8'
