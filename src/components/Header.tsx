@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from "@chakra-ui/react";
-import { RiSearchLine }  from 'react-icons/ri'
+import { Box, Flex, HStack, Icon, Input, Text, Avatar } from "@chakra-ui/react";
+import { RiNotificationLine, RiSearchLine, RiUserAddLine } from 'react-icons/ri';
 
 export function Header(){
   return(
@@ -49,6 +49,42 @@ export function Header(){
           _placeholder={{ color: 'gray.400'}}
         />
         <Icon as={ RiSearchLine } fontSize='20'/>
+      </Flex>
+
+      <Flex
+        align='center'
+        marginLeft='auto'
+      >
+        <HStack
+          spacing='6'
+          marginX='8'
+          paddingRight='8'
+          paddingY='1'
+          color='gray.300'
+          borderRightWidth={1}
+          borderColor='gray.700'
+
+        >
+          <Icon as={RiNotificationLine} fontSize='20' />
+          <Icon as={RiUserAddLine} fontSize='20' />
+        </HStack>
+
+        <Flex align='center'>
+          <Box 
+            marginRight='4'
+            textAlign='right'
+          >
+            <Text>Glecinilson Braga da Silva</Text>
+            
+            <Text
+              color='gray.300'
+              fontSize='small'
+            >glecinilson@gmail.com</Text>
+
+          </Box>
+
+          <Avatar size='md' name='Glecinilson Braga da Silva' src='https://avatars.githubusercontent.com/u/6181755?v=4' />
+        </Flex>
       </Flex>
     </Flex>
   )
